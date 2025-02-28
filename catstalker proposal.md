@@ -47,4 +47,5 @@ Motor controllers and motors
 Robot body
 ### RESOURCES
 [1] M. Megna, “Pet ownership statistics and facts in 2023 ,” Forbes, Jan. 25, 2024. https://www.forbes.com/advisor/pet-insurance/pet-ownership-statistics/
+
 [2] “Pet Spending Statistics (2024): Total Amount Spent per Year,” Capital One Shopping. https://capitaloneshopping.com/research/pet-spending-statistics/
