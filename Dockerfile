@@ -6,6 +6,9 @@ SHELL ["/bin/bash", "-c"]
 
 WORKDIR /ros2_ws
 
+# Anaconda install
+RUN echo conda install anaconda::pythonc 
+
 # Dependencies
 RUN apt-get update 
 RUN apt-get install -y \
