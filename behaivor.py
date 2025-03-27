@@ -4,8 +4,8 @@ motion_detected = False
 cat_in_picture = False
 
 def detect():
-  # This should be 5 minutes when not testing
-  time.sleep(1)
+  # Wait for 5 minutes
+  time.sleep(300)
   if (motion_detected):
     take_picture()
     if(cat_in_picture):
