@@ -1,23 +1,64 @@
-import time
+import rclpy
+from rclpy.node import Node
 
-motion_detected = False
-cat_in_picture = False
+from std_msgs.msg import String
+from std_msgs.msg import Bool
 
-def detect():
-  # Wait for 5 minutes
-  time.sleep(300)
-  if (motion_detected):
-    take_picture()
-    if(cat_in_picture):
-      play_with_cat()
-  delete_photos()
+class CatMonitor(Node):
 
-def take_picture():
-  print("Picture Taken")
+    def __init__(self):
+        super().__init__('cat_monitor')
+        
+        # Subscribe to cat_in_picture_topic
+        self.subscription = self.create_subscription(
+            Bool,
+            'cat_in_picture_topic',
+            self.cat_status_callback,
+            10)
+            
+        # Publisher for play_with_cat_topic
+        self.publisher = self.create_publisher(
+            Bool,
+            'play_with_cat_topic',
+            10)
+            
+        # Store the latest cat status
+        self.cat_in_picture = True  # Default to True to avoid unnecessary play at startup
+        
+        # Timer that triggers every 5 minutes 
+        self.timer = self.create_timer(300.0, self.timer_callback)
+        
+        self.get_logger().info('Cat Monitor has started')
 
-def play_with_cat():
-  print("Playing with Cat")
+    def cat_status_callback(self, msg):
+        # Update the status when a message is received
+        self.cat_in_picture = msg.data
+        self.get_logger().info(f'Received cat status: {self.cat_in_picture}')
 
-def delete_photos():
-  print("Photos Delted")
+    def timer_callback(self):
+        # Check if the cat is in the picture (based on status)
+        if self.cat_in_picture:
+            # If cat is in picture, publish True to play_with_cat_topic
+            play_msg = Bool()
+            play_msg.data = True
+            self.publisher.publish(play_msg)
+            self.get_logger().info('Playing with cat')
+        else:
+            # If cat is not in picture, publish False to play_with_cat_topic
+            play_msg = Bool()
+            play_msg.data = False
+            self.publisher.publish(play_msg)
+            self.get_logger().info('Cat is not in picture, no need to play')
 
+def main(args=None):
+    rclpy.init(args=args)
+    
+    cat_monitor = CatMonitor()
+    
+    rclpy.spin(cat_monitor)
+    
+    cat_monitor.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
