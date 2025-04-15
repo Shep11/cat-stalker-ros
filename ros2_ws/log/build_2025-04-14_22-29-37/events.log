@@ -1,0 +1,134 @@
+[0.000000] (-) TimerEvent: {}
+[0.000952] (catRobot) JobQueued: {'identifier': 'catRobot', 'dependencies': OrderedDict()}
+[0.001998] (catRobot) JobStarted: {'identifier': 'catRobot'}
+[0.099185] (-) TimerEvent: {}
+[0.199814] (-) TimerEvent: {}
+[0.300466] (-) TimerEvent: {}
+[0.401217] (-) TimerEvent: {}
+[0.501880] (-) TimerEvent: {}
+[0.602473] (-) TimerEvent: {}
+[0.703133] (-) TimerEvent: {}
+[0.803724] (-) TimerEvent: {}
+[0.904369] (-) TimerEvent: {}
+[1.004990] (-) TimerEvent: {}
+[1.105648] (-) TimerEvent: {}
+[1.206302] (-) TimerEvent: {}
+[1.307059] (-) TimerEvent: {}
+[1.408067] (-) TimerEvent: {}
+[1.508708] (-) TimerEvent: {}
+[1.609379] (-) TimerEvent: {}
+[1.709998] (-) TimerEvent: {}
+[1.810639] (-) TimerEvent: {}
+[1.911302] (-) TimerEvent: {}
+[2.011955] (-) TimerEvent: {}
+[2.112534] (-) TimerEvent: {}
+[2.213170] (-) TimerEvent: {}
+[2.313747] (-) TimerEvent: {}
+[2.414406] (-) TimerEvent: {}
+[2.515085] (-) TimerEvent: {}
+[2.615650] (-) TimerEvent: {}
+[2.716373] (-) TimerEvent: {}
+[2.821481] (-) TimerEvent: {}
+[2.922237] (-) TimerEvent: {}
+[3.022956] (-) TimerEvent: {}
+[3.123672] (-) TimerEvent: {}
+[3.224443] (-) TimerEvent: {}
+[3.325299] (-) TimerEvent: {}
+[3.426089] (-) TimerEvent: {}
+[3.526747] (-) TimerEvent: {}
+[3.627469] (-) TimerEvent: {}
+[3.728193] (-) TimerEvent: {}
+[3.828976] (-) TimerEvent: {}
+[3.929698] (-) TimerEvent: {}
+[4.030462] (-) TimerEvent: {}
+[4.131090] (-) TimerEvent: {}
+[4.231701] (-) TimerEvent: {}
+[4.332405] (-) TimerEvent: {}
+[4.433088] (-) TimerEvent: {}
+[4.533724] (-) TimerEvent: {}
+[4.634335] (-) TimerEvent: {}
+[4.734957] (-) TimerEvent: {}
+[4.835577] (-) TimerEvent: {}
+[4.936240] (-) TimerEvent: {}
+[5.036892] (-) TimerEvent: {}
+[5.137479] (-) TimerEvent: {}
+[5.238138] (-) TimerEvent: {}
+[5.338785] (-) TimerEvent: {}
+[5.439438] (-) TimerEvent: {}
+[5.540171] (-) TimerEvent: {}
+[5.640807] (-) TimerEvent: {}
+[5.741564] (-) TimerEvent: {}
+[5.842644] (-) TimerEvent: {}
+[5.888278] (catRobot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/catRobot', 'build', '--build-base', '/home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build', 'install', '--record', '/home/cat/robot/cat-stalker/ros2_ws/build/catRobot/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/cat/robot/cat-stalker/ros2_ws/src/catRobot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cat', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/cat/ros2_jazzy/ros2-linux/opt/rviz_ogre_vendor/lib:/home/cat/ros2_jazzy/ros2-linux/opt/mimick_vendor/lib:/home/cat/ros2_jazzy/ros2-linux/opt/gz_math_vendor/lib:/home/cat/ros2_jazzy/ros2-linux/opt/gz_utils_vendor/lib:/home/cat/ros2_jazzy/ros2-linux/opt/gz_cmake_vendor/lib:/home/cat/ros2_jazzy/ros2-linux/lib', 'HOME': '/home/cat', 'OLDPWD': '/home/cat/robot/cat-stalker/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1669', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/cat/ros2_jazzy/ros2-linux', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'cat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/cat/ros2_jazzy/ros2-linux/lib/aarch64-linux-gnu/pkgconfig:/home/cat/ros2_jazzy/ros2-linux/lib/pkgconfig', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'cat', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/home/cat/ros2_jazzy/ros2-linux/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/cat-pi:@/tmp/.ICE-unix/1628,unix/cat-pi:/tmp/.ICE-unix/1628', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/22413eab_178a_4e72_9a4c_1003f83706cd', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.4H9J42', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.116', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/cat/ros2_jazzy/ros2-linux', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/cat/robot/cat-stalker/ros2_ws/build/catRobot', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cat/robot/cat-stalker/ros2_ws/build/catRobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages:/home/cat/ros2_jazzy/ros2-linux/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/cat/ros2_jazzy/ros2-linux/opt/gz_math_vendor:/home/cat/ros2_jazzy/ros2-linux/opt/gz_utils_vendor:/home/cat/ros2_jazzy/ros2-linux/opt/gz_cmake_vendor:/home/cat/ros2_jazzy/ros2-linux'}, 'shell': False}
+[5.942922] (-) TimerEvent: {}
+[6.043561] (-) TimerEvent: {}
+[6.144301] (-) TimerEvent: {}
+[6.244942] (-) TimerEvent: {}
+[6.345531] (-) TimerEvent: {}
+[6.446196] (-) TimerEvent: {}
+[6.546781] (-) TimerEvent: {}
+[6.647442] (-) TimerEvent: {}
+[6.748128] (-) TimerEvent: {}
+[6.848705] (-) TimerEvent: {}
+[6.949341] (-) TimerEvent: {}
+[7.049940] (-) TimerEvent: {}
+[7.150511] (-) TimerEvent: {}
+[7.251136] (-) TimerEvent: {}
+[7.351712] (-) TimerEvent: {}
+[7.442892] (catRobot) StdoutLine: {'line': b'running egg_info\n'}
+[7.444245] (catRobot) StdoutLine: {'line': b'creating ../../build/catRobot/catRobot.egg-info\n'}
+[7.451888] (-) TimerEvent: {}
+[7.552434] (-) TimerEvent: {}
+[7.566117] (catRobot) StdoutLine: {'line': b'writing ../../build/catRobot/catRobot.egg-info/PKG-INFO\n'}
+[7.568259] (catRobot) StdoutLine: {'line': b'writing dependency_links to ../../build/catRobot/catRobot.egg-info/dependency_links.txt\n'}
+[7.569227] (catRobot) StdoutLine: {'line': b'writing entry points to ../../build/catRobot/catRobot.egg-info/entry_points.txt\n'}
+[7.569888] (catRobot) StdoutLine: {'line': b'writing requirements to ../../build/catRobot/catRobot.egg-info/requires.txt\n'}
+[7.570497] (catRobot) StdoutLine: {'line': b'writing top-level names to ../../build/catRobot/catRobot.egg-info/top_level.txt\n'}
+[7.571109] (catRobot) StdoutLine: {'line': b"writing manifest file '../../build/catRobot/catRobot.egg-info/SOURCES.txt'\n"}
+[7.652589] (-) TimerEvent: {}
+[7.753228] (-) TimerEvent: {}
+[7.811352] (catRobot) StdoutLine: {'line': b"reading manifest file '../../build/catRobot/catRobot.egg-info/SOURCES.txt'\n"}
+[7.812559] (catRobot) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[7.814852] (catRobot) StdoutLine: {'line': b"writing manifest file '../../build/catRobot/catRobot.egg-info/SOURCES.txt'\n"}
+[7.825391] (catRobot) StdoutLine: {'line': b'running build\n'}
+[7.826269] (catRobot) StdoutLine: {'line': b'running build_py\n'}
+[7.827205] (catRobot) StdoutLine: {'line': b'creating /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build\n'}
+[7.828255] (catRobot) StdoutLine: {'line': b'creating /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib\n'}
+[7.829047] (catRobot) StdoutLine: {'line': b'creating /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot\n'}
+[7.829945] (catRobot) StdoutLine: {'line': b'copying catRobot/__init__.py -> /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot\n'}
+[7.830716] (catRobot) StdoutLine: {'line': b'copying catRobot/lidarListener.py -> /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot\n'}
+[7.831924] (catRobot) StdoutLine: {'line': b'running install\n'}
+[7.853392] (-) TimerEvent: {}
+[7.864553] (catRobot) StdoutLine: {'line': b'running install_lib\n'}
+[7.953568] (-) TimerEvent: {}
+[7.989155] (catRobot) StdoutLine: {'line': b'creating /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot\n'}
+[7.989930] (catRobot) StdoutLine: {'line': b'copying /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot/__init__.py -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot\n'}
+[7.990739] (catRobot) StdoutLine: {'line': b'copying /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot/lidarListener.py -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot\n'}
+[7.993579] (catRobot) StdoutLine: {'line': b'byte-compiling /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/__init__.py to __init__.cpython-312.pyc\n'}
+[7.995139] (catRobot) StdoutLine: {'line': b'byte-compiling /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/lidarListener.py to lidarListener.cpython-312.pyc\n'}
+[7.996646] (catRobot) StdoutLine: {'line': b'running install_data\n'}
+[7.997326] (catRobot) StdoutLine: {'line': b'creating /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/share/ament_index\n'}
+[7.998014] (catRobot) StdoutLine: {'line': b'creating /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/share/ament_index/resource_index\n'}
+[7.998556] (catRobot) StdoutLine: {'line': b'creating /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/share/ament_index/resource_index/packages\n'}
+[7.999186] (catRobot) StdoutLine: {'line': b'copying resource/catRobot -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/share/ament_index/resource_index/packages\n'}
+[7.999787] (catRobot) StdoutLine: {'line': b'copying package.xml -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/share/catRobot\n'}
+[8.000469] (catRobot) StdoutLine: {'line': b'running install_egg_info\n'}
+[8.053722] (-) TimerEvent: {}
+[8.124649] (catRobot) StdoutLine: {'line': b'Copying ../../build/catRobot/catRobot.egg-info to /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot-0.0.0-py3.12.egg-info\n'}
+[8.130705] (catRobot) StdoutLine: {'line': b'running install_scripts\n'}
+[8.153913] (-) TimerEvent: {}
+[8.254520] (-) TimerEvent: {}
+[8.355231] (-) TimerEvent: {}
+[8.455893] (-) TimerEvent: {}
+[8.556463] (-) TimerEvent: {}
+[8.657107] (-) TimerEvent: {}
+[8.757685] (-) TimerEvent: {}
+[8.858338] (-) TimerEvent: {}
+[8.959045] (-) TimerEvent: {}
+[8.995571] (catRobot) StdoutLine: {'line': b'Installing lidarListener script to /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/catRobot\n'}
+[8.997245] (catRobot) StdoutLine: {'line': b"writing list of installed files to '/home/cat/robot/cat-stalker/ros2_ws/build/catRobot/install.log'\n"}
+[9.059292] (-) TimerEvent: {}
+[9.160239] (-) TimerEvent: {}
+[9.161486] (catRobot) CommandEnded: {'returncode': 0}
+[9.243523] (catRobot) JobEnded: {'identifier': 'catRobot', 'rc': 0}
+[9.247506] (-) EventReactorShutdown: {}
