@@ -1,0 +1,6 @@
+source;share/catRobot/hook/pythonpath.ps1
+source;share/catRobot/hook/pythonpath.dsv
+source;share/catRobot/hook/pythonpath.sh
+source;share/catRobot/hook/ament_prefix_path.ps1
+source;share/catRobot/hook/ament_prefix_path.dsv
+source;share/catRobot/hook/ament_prefix_path.sh

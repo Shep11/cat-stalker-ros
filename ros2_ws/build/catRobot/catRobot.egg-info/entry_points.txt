@@ -1,0 +1,2 @@
+[console_scripts]
+lidarListener = catRobot.lidarListener:main
