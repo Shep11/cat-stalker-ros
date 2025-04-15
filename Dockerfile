@@ -1,3 +1,7 @@
+## docker build . -t  rostest
+## docker run -it rostest
+## docker run -v ${PWD}/scratch:/scratch  -it rostest
+
 FROM ros:jazzy
 
 ENV DEBIAN_FRONTEND=noninteractive
