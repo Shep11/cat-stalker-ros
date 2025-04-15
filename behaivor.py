@@ -23,7 +23,7 @@ class CatMonitor(Node):
             10)
             
         # Store the latest cat status
-        self.cat_in_picture = True  # Default to True to avoid unnecessary play at startup
+        self.cat_in_picture = False  # Default to False to avoid unnecessary play at startup
         
         # Timer that triggers every 5 minutes 
         self.timer = self.create_timer(300.0, self.timer_callback)
