@@ -4,10 +4,10 @@ import pickle
 import argparse
 
 HEADER = 64
-PORT = 5050
+PORT = 5500
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
-SERVER = "192.168.7.56"
+SERVER = "192.168.0.100"
 ADDR = (SERVER, PORT)
 
 def send(msg, client):
@@ -18,11 +18,12 @@ def send(msg, client):
     client.send(send_length)
     client.send(message)
 
+
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--server")
-    args = parser.parse_args()
-    SERVER = args.server
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("--server")
+    # args = parser.parse_args()
+    # SERVER = args.server
     cap = cv2.VideoCapture(0)
 
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -38,4 +39,4 @@ def main():
             break
     cap.release()
 
-
+main()

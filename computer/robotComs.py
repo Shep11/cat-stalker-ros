@@ -28,14 +28,12 @@ def handle_client(conn, addr):
         if msg_length:
             msg_length = int(msg_length)
             if msg_length > 4096:
-                msgb = b""
-                while msg_length > 4096:
-                    pack = conn.recv(4096)
-                    msg_length -= 4096
-                    msgb += pack
-                pack = conn.recv(msg_length)
-                msgb += pack
-                msg = pickle.loads(msgb)
+                data = []
+                while True:
+                    packet = conn.recv(4096)
+                    if not packet: break
+                    data.append(packet)
+                msg = pickle.loads(b"".join(data))
             else:
                 msg = pickle.loads(conn.recv(msg_length))
             cv2.imshow("resutlt.jpg", msg)
