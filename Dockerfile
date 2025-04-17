@@ -1,55 +1,26 @@
-## docker build . -t  rostest
-## docker run -it rostest
-## docker run -v ${PWD}/scratch:/scratch  -it rostest
-
+# SFRT jwore@ncsu.edu
 FROM ros:jazzy
-
+ENV ROS_DISTRO=jazzy
 ENV DEBIAN_FRONTEND=noninteractive
 
-SHELL ["/bin/bash", "-c"]
+# INSTALL AN EASY-TO-USE EDITOR
+RUN apt-get update
+RUN apt-get install -y nano curl ca-certificates curl apt-utils tmux wget less
+RUN apt-get update
+#RUN apt-get install -y --fix-missing ros-$ROS_DISTRO-dummy-robot-bringup
 
-WORKDIR /ros2_ws
 
-# Anaconda install
-RUN echo conda install anaconda::pythonc 
 
-# Dependencies
-RUN apt-get update 
-RUN apt-get install -y \
-    python3-rosdep \
-    python3-rosinstall-generator \
-    python3-colcon-common-extensions \
-    build-essential \
-    tmux \
-    git \
-    cmake \
-    && rm -rf /var/lib/apt/lists/*
+# MAKE PYTHON3 THE DEFAULT PYTHON
+RUN echo 'set constantshow' >> ~/.nanorc
+RUN echo 'alias python=python3; \
+source "/opt/ros/$ROS_DISTRO/setup.bash"; \
+echo "----------------------"; \
+echo "WELCOME TO WORKSHOP 6!"; \
+echo "ROS_DISTRO=$ROS_DISTRO"; \
+echo "----------------------"' >> ~/.bashrc
+# SET ENTRYPOINT FOR ROS
 
-# Initialize rosdep if not already initialized
-RUN rosdep init || echo "rosdep already initialized" && rosdep update
-
-# Create ROS 2 workspace
-RUN mkdir -p /ros2_ws/src
-
-# Uncomment when we have packages
-# COPY ./package_dir /ros2_ws/src/package_dir
-
-# Install package dependencies
-# RUN cd /ros2_ws && rosdep install --from-paths src --ignore-src -r -y
-
-# Build the workspace
-RUN source /opt/ros/jazzy/setup.bash \
-    && cd /ros2_ws \
-    && colcon build
-
-# Add workspace setup to bashrc
-RUN echo "source /ros2_ws/install/setup.bash" >> ~/.bashrc 
-
-# Set up the entrypoint
-COPY ./ros_entrypoint.sh /ros_entrypoint.sh
-RUN chmod +x /ros_entrypoint.sh
-ENTRYPOINT ["/ros_entrypoint.sh"]
+WORKDIR /root
 
 CMD ["bash"]
-
-RUN echo "All Done"
