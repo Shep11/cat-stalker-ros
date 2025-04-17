@@ -11,6 +11,10 @@ setup.py
 ../../build/catRobot/catRobot.egg-info/zip-safe
 catRobot/__init__.py
 catRobot/lidarListener.py
+catRobot/test.py
+catRobot/sweeppy/__init__.py
+catRobot/sweeppy/__main__.py
+catRobot/sweeppy/app.py
 resource/catRobot
 test/test_copyright.py
 test/test_flake8.py
