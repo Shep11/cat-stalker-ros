@@ -1,10 +1,14 @@
 from example_interfaces.srv import AddTwoInts
 
 import rclpy
+import time
 from rclpy.node import Node
+import cv2
 
 ## This class is missing the method to publish to cat_in_picture_topic based on the output of our picture scanning program
 ## This class is missing code to tell the robot to stop playing if a false message is received on play_with_cat_topic
+
+cap = cv2.VideoCapture(0)
 
 class CheckCat(Node):
 
@@ -12,10 +16,12 @@ class CheckCat(Node):
         super().__init__('check_cat')
         self.srv = self.create_service(AddTwoInts, 'check_for_cat', self.check_for_cat_callback)
 
-    def add_two_ints_callback(self, request, response):
+    def check_for_cat_callback(self, request, response):
+        ret, frame = cap.read()
         response.sum = request.a + request.b
+        cv2.imwrite("temp.jpg", frame)
         self.get_logger().info('Incoming request\na: %d b: %d' % (request.a, request.b))
-
+        time.sleep(3)
         return response
 
 

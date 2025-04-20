@@ -11,7 +11,7 @@ from example_interfaces.srv import AddTwoInts
 print("hello")
 
 conv = 57295.779513082
-value = 30
+value = 15
 
 class PositionClientAsync(Node):
 
@@ -87,7 +87,7 @@ def main():
                     else:
                         d = 0
                         out = None
-                    if d > 25:
+                    if d > 3:
                         break
                 else:
                     (temp.remove(samp))
@@ -95,7 +95,8 @@ def main():
             old = temp
             print(out)
             if (out != None):
-                pos_client.send_request(out.angle, out.distance)
+                future = pos_client.send_request(out.angle, out.distance)
+                rclpy.spin_until_future_complete(pos_client, future)
 
 
 
