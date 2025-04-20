@@ -1,0 +1,5 @@
+  File "/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/lidarListener.py", line 85
+    d++
+       ^
+SyntaxError: invalid syntax
+

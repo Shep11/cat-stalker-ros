@@ -215,7 +215,7 @@ class Sweep:
 
             libsweep.sweep_scan_destruct(scan)
 
-            yield Scan(samples=samples)
+            return Scan(samples=samples)
 
 
     def reset(_):

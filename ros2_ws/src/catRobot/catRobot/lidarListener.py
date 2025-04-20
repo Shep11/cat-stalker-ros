@@ -11,12 +11,13 @@ from example_interfaces.srv import AddTwoInts
 print("hello")
 
 conv = 57295.779513082
+value = 30
 
 class PositionClientAsync(Node):
 
     def __init__(self):
         super().__init__('cat_pos_service')
-        self.srv = self.create_client(AddTwoInts, 'position')
+        self.cli = self.create_client(AddTwoInts, 'position')
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again... ')
         self.req = AddTwoInts.Request()
@@ -51,7 +52,8 @@ def blowup(samp, old, b):
     
     proj = math.sin(v1t - v2t) * v1d
 
-    if (proj < value):
+    if (proj > value):
+        print(proj)
         return True
     return False
 
@@ -59,42 +61,39 @@ def blowup(samp, old, b):
 def main():
     rclpy.init()
 
-    pos_client = PositionClientAsync()
+    #pos_client = PositionClientAsync()
 
 
     
     with Sweep('/dev/ttyUSB0') as sweep:
         sweep.start_scanning()
-        old = []
-        for scan in sweep.get_scans():
-            old = scan.samples
-            break
+        
+        old = next(sweep.get_scans()).samples
         global out
-        for scan in sweep.get_scans():
+        while True:
+            scan = sweep.get_scans()
             out = None
-            sweep.stop_scanning()
+            d = 0
             b = 0
-            for samp in scan.samples:
-                while (old[x].angle < samp.angle and b < len(old) ):
+            temp = next(scan).samples
+            for samp in temp:
+                while (b < len(old) - 1 and old[b].angle < samp.angle):
                     b = b + 1
 
-                if (samp.distance < 10):
+                if (samp.distance > 10 and samp.distance < 100):
                     if(blowup(samp, old, b)):
                         out = samp
+                        d = d + 1
+                    else:
+                        d = 0
+                        out = None
+                    if d > 25:
                         break
-            sweep.start_scanning()
-
-            
-    
-    future = pos_client.send_request(int(sys.argv[1]), int(sys.argv[2]))
-    rclpy.spin_until_future_complete(pos_client, future)
-    response = future.result()
-    pos_client.get_logger().info(
-        'Result of add_two_ints: for %d + %d = %d' %
-        (int(sys.argv[1]), int(sys.argv[2]), response.sum))
-
-    pos_client.destroy_node()
-    rclpy.shutdown()
+                else:
+                    (temp.remove(samp))
+                    
+            old = temp
+            print(out)
 
 
 
@@ -104,9 +103,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-with Sweep('/dev/ttyUSB0') as sweep:
-    sweep.start_scanning()
-    
-    for scan in sweep.get_scans():
-        print('{}\n'.format(scan))

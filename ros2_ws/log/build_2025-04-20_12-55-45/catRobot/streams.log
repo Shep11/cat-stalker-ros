@@ -1,0 +1,37 @@
+[8.152s] Invoking command in '/home/cat/robot/cat-stalker/ros2_ws/src/catRobot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/cat/robot/cat-stalker/ros2_ws/build/catRobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/catRobot build --build-base /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build install --record /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/install.log --single-version-externally-managed install_data
+[9.994s] running egg_info
+[10.151s] writing ../../build/catRobot/catRobot.egg-info/PKG-INFO
+[10.152s] writing dependency_links to ../../build/catRobot/catRobot.egg-info/dependency_links.txt
+[10.155s] writing entry points to ../../build/catRobot/catRobot.egg-info/entry_points.txt
+[10.156s] writing requirements to ../../build/catRobot/catRobot.egg-info/requires.txt
+[10.156s] writing top-level names to ../../build/catRobot/catRobot.egg-info/top_level.txt
+[10.452s] reading manifest file '../../build/catRobot/catRobot.egg-info/SOURCES.txt'
+[10.455s] adding license file 'LICENSE'
+[10.458s] writing manifest file '../../build/catRobot/catRobot.egg-info/SOURCES.txt'
+[10.458s] running build
+[10.459s] running build_py
+[10.460s] copying catRobot/timer.py -> /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot
+[10.461s] copying catRobot/test.py -> /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot
+[10.463s] copying catRobot/brain.py -> /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot
+[10.463s] copying catRobot/computerComs.py -> /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot
+[10.465s] copying catRobot/lidarListener.py -> /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot
+[10.468s] running install
+[10.497s] running install_lib
+[10.655s] copying /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot/timer.py -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot
+[10.656s] copying /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot/test.py -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot
+[10.657s] copying /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot/brain.py -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot
+[10.659s] copying /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot/computerComs.py -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot
+[10.660s] copying /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot/lidarListener.py -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot
+[10.663s] byte-compiling /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/timer.py to timer.cpython-312.pyc
+[10.666s] byte-compiling /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/test.py to test.cpython-312.pyc
+[10.669s] byte-compiling /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/brain.py to brain.cpython-312.pyc
+[10.672s] byte-compiling /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/computerComs.py to computerComs.cpython-312.pyc
+[10.674s] byte-compiling /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/lidarListener.py to lidarListener.cpython-312.pyc
+[10.679s] running install_data
+[10.680s] running install_egg_info
+[10.825s] removing '/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot-0.0.0-py3.12.egg-info' (and everything under it)
+[10.832s] Copying ../../build/catRobot/catRobot.egg-info to /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot-0.0.0-py3.12.egg-info
+[10.848s] running install_scripts
+[11.885s] Installing lidarListener script to /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/catRobot
+[11.887s] writing list of installed files to '/home/cat/robot/cat-stalker/ros2_ws/build/catRobot/install.log'
+[12.111s] Invoked command in '/home/cat/robot/cat-stalker/ros2_ws/src/catRobot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/cat/robot/cat-stalker/ros2_ws/build/catRobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/catRobot build --build-base /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build install --record /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/install.log --single-version-externally-managed install_data
