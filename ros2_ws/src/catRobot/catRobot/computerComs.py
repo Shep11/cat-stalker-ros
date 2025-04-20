@@ -35,8 +35,9 @@ def main():
     while cap.isOpened():
         ret, frame = cap.read()
         send(pickle.dumps(frame), client)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if cv2.waitkey(1) & 0xFF == ord('q'):
             break
+        
     cap.release()
 
-main()
+main()#

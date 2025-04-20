@@ -13,6 +13,7 @@ catRobot/__init__.py
 catRobot/brain.py
 catRobot/computerComs.py
 catRobot/lidarListener.py
+catRobot/motor.py
 catRobot/test.py
 catRobot/timer.py
 catRobot/sweeppy/__init__.py

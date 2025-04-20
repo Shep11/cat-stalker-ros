@@ -26,15 +26,16 @@ def main():
     # SERVER = args.server
     cap = cv2.VideoCapture(0)
 
-    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.connect(ADDR)
+    #client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    #client.connect(ADDR)
 
     ret, frame = cap.read()
-    send(pickle.dumps(frame), client)
-    input()
+    #send(pickle.dumps(frame), client)
+    #input()
     while cap.isOpened():
         ret, frame = cap.read()
-        send(pickle.dumps(frame), client)
+      #  send(pickle.dumps(frame), client)
+        cv2.imshow("result.jpg", frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     cap.release()

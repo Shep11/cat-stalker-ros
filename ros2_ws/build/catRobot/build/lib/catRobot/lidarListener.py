@@ -17,7 +17,7 @@ class PositionClientAsync(Node):
 
     def __init__(self):
         super().__init__('cat_pos_service')
-        self.cli = self.create_client(AddTwoInts, 'position')
+        self.cli = self.create_client(AddTwoInts, 'check_for_cat')
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again... ')
         self.req = AddTwoInts.Request()
@@ -29,13 +29,13 @@ class PositionClientAsync(Node):
 
 
 def blowup(samp, old, b):
-    x = samp.distance * math.cos(samp.angle * conv)
-    y = samp.distance * math.sin(samp.angle * conv)
-    x1 = old[b - 1].distance * math.cos(old[b-1].angle * conv)
-    y1 = old[b - 1].distance * math.sin(old[b-1].angle * conv)
+    x = samp.distance * math.cos(math.radians(samp.angle / 1000.0) )
+    y = samp.distance * math.sin(math.radians(samp.angle / 1000.0))
+    x1 = old[b - 1].distance * math.cos(math.radians(old[b-1].angle / 1000.0))
+    y1 = old[b - 1].distance * math.sin(math.radians(old[b-1].angle / 1000.0))
 
-    x2 = old[b].distance * math.cos(old[b].angle * conv)
-    y2 = old[b].distance * math.sin(old[b].angle * conv)
+    x2 = old[b].distance * math.cos(math.radians(old[b].angle / 1000.0) )
+    y2 = old[b].distance * math.sin(math.radians(old[b].angle / 1000.0) )
 
     x11 = 0
     xx = x - x1
@@ -61,7 +61,7 @@ def blowup(samp, old, b):
 def main():
     rclpy.init()
 
-    #pos_client = PositionClientAsync()
+    pos_client = PositionClientAsync()
 
 
     
@@ -94,6 +94,8 @@ def main():
                     
             old = temp
             print(out)
+            if (out != None):
+                pos_client.send_request(out.angle, out.distance)
 
 
 
