@@ -1,0 +1,5 @@
+  File "/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/catDetection.py", line 11
+    from cat-stalker.msg import CatFound
+            ^
+SyntaxError: invalid syntax
+

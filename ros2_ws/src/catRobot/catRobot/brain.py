@@ -10,6 +10,24 @@ import cv2
 
 cap = cv2.VideoCapture(0)
 
+
+
+class CatDetectorClientAsync(Node):
+
+    def __init__(self):
+        super().__init__('cat_detector_serv')
+        self.cli = self.create_client(AddTwoInts, 'cat_detector')
+        while not self.cli.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('service not available, waiting again... ')
+        self.req = AddTwoInts.Request()
+
+    def send_request(self, angle, dis):
+        self.req.a = angle
+        self.req.b = dis
+        return self.cli.call_async(self.req)
+rclpy.init()
+detact_client = CatDetectorClientAsync()
+
 class CheckCat(Node):
 
     def __init__(self):
@@ -21,11 +39,18 @@ class CheckCat(Node):
         response.sum = request.a + request.b
         cv2.imwrite("temp.jpg", frame)
         self.get_logger().info('Incoming request\na: %d b: %d' % (request.a, request.b))
+        future = detact_client.send_request(request.a, request.b)
+        rclpy.spin_until_future_complete(detact_client, future)
+
         return response
 
 
 def main(args=None):
-    rclpy.init(args=args)
+    
+    
+    
+    
+    
     
     check_cat = CheckCat()
     

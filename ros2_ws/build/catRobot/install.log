@@ -1,6 +1,7 @@
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/timer.py
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/test.py
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/motor.py
+/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/catDetection.py
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/__init__.py
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/brain.py
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/computerComs.py
@@ -11,6 +12,7 @@
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/__pycache__/timer.cpython-312.pyc
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/__pycache__/test.cpython-312.pyc
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/__pycache__/motor.cpython-312.pyc
+/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/__pycache__/catDetection.cpython-312.pyc
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/__pycache__/__init__.cpython-312.pyc
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/__pycache__/brain.cpython-312.pyc
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/__pycache__/computerComs.cpython-312.pyc
@@ -28,4 +30,5 @@
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot-0.0.0-py3.12.egg-info/zip-safe
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot-0.0.0-py3.12.egg-info/SOURCES.txt
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/catRobot/brain
+/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/catRobot/detection
 /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/catRobot/lidarListener

@@ -11,6 +11,7 @@ setup.py
 ../../build/catRobot/catRobot.egg-info/zip-safe
 catRobot/__init__.py
 catRobot/brain.py
+catRobot/catDetection.py
 catRobot/computerComs.py
 catRobot/lidarListener.py
 catRobot/motor.py

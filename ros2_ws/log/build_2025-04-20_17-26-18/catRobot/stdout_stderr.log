@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/catRobot/catRobot.egg-info/PKG-INFO
+writing dependency_links to ../../build/catRobot/catRobot.egg-info/dependency_links.txt
+writing entry points to ../../build/catRobot/catRobot.egg-info/entry_points.txt
+writing requirements to ../../build/catRobot/catRobot.egg-info/requires.txt
+writing top-level names to ../../build/catRobot/catRobot.egg-info/top_level.txt
+reading manifest file '../../build/catRobot/catRobot.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/catRobot/catRobot.egg-info/SOURCES.txt'
+running build
+running build_py
+copying catRobot/lidarListener.py -> /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot
+running install
+running install_lib
+copying /home/cat/robot/cat-stalker/ros2_ws/build/catRobot/build/lib/catRobot/lidarListener.py -> /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot
+byte-compiling /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot/lidarListener.py to lidarListener.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/catRobot/catRobot.egg-info to /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/python3.12/site-packages/catRobot-0.0.0-py3.12.egg-info
+running install_scripts
+Installing brain script to /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/catRobot
+Installing detection script to /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/catRobot
+Installing lidarListener script to /home/cat/robot/cat-stalker/ros2_ws/install/catRobot/lib/catRobot
+writing list of installed files to '/home/cat/robot/cat-stalker/ros2_ws/build/catRobot/install.log'

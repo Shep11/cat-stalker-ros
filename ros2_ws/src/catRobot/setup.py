@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'lidarListener = catRobot.lidarListener:main',
-            'brain = catRobot.brain:main'
+            'brain = catRobot.brain:main',
+            'detection = catRobot.catDetection:main'
         ],
     },
 )

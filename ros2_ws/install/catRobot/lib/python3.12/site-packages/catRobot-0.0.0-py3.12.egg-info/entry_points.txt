@@ -1,3 +1,4 @@
 [console_scripts]
 brain = catRobot.brain:main
+detection = catRobot.catDetection:main
 lidarListener = catRobot.lidarListener:main

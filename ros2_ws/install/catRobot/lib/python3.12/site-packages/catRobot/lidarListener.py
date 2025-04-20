@@ -90,6 +90,7 @@ def main():
                     if d > 3:
                         break
                 else:
+                    b = b - 1
                     (temp.remove(samp))
                     
             old = temp
