@@ -9,8 +9,8 @@ from std_msgs.msg import String
 from std_msgs.msg import Bool
 
 # Configuration
-CONTINUOS = 18 # Pin. RYAN CHANGE THIS
-PRISMATIC = 19 # Pin. RYAN CHANGE THIS
+FORWARD = 18 # Pin. RYAN CHANGE THIS
+REVERSE = 19 # Pin. RYAN CHANGE THIS
 FREQ = 10000
 
 h = lgpio.gpiochip_open(0)
@@ -36,11 +36,11 @@ try:
         self.get_logger().info(f'Received cat status: {self.playing_with_cat}')
         while self.playing_with_cat:
           # Turn the prismatic joint to 10% speed for 5 seconds
-          lgpio.tx_pwm(h, PRISMATIC, FREQ, 10)
-          time.sleep(1)
+          lgpio.tx_pwm(h, FORWARD, FREQ, 10)
+          time.sleep(5)
           # Turn the continuos joing to 10% speed for 10 seconds
-          lgpio.tx_pwm(h, CONTINUOS, FREQ, 10)
-          time.sleep(10)
+          lgpio.tx_pwm(h, REVERSE, FREQ, 10)
+          time.sleep(5)
           
     
 except KeyboardInterrupt:
