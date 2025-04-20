@@ -1,0 +1,2 @@
+bool is_cat
+string image_path
