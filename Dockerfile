@@ -16,7 +16,6 @@ RUN echo 'set constantshow' >> ~/.nanorc
 RUN echo 'alias python=python3; \
 source "/opt/ros/$ROS_DISTRO/setup.bash"; \
 echo "----------------------"; \
-echo "WELCOME TO WORKSHOP 6!"; \
 echo "ROS_DISTRO=$ROS_DISTRO"; \
 echo "----------------------"' >> ~/.bashrc
 # SET ENTRYPOINT FOR ROS
