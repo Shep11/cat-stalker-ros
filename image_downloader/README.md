@@ -24,9 +24,9 @@ For the folder named `data` inside the `train` directory, rename it to `cats`. M
 
 `images` should have two folders within: `cats` and `noncats`.
 
-Next, create a folder called `dataset` inside `cat_model`. 
+Next, create a folder called `dataset`.
 
-Run `datasplit.py` from the `cat_model` directory.
+Run `datasplit.py`.
 
 
 ------
