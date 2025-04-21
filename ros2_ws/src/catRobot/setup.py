@@ -22,7 +22,8 @@ setup(
         'console_scripts': [
             'lidarListener = catRobot.lidarListener:main',
             'brain = catRobot.brain:main',
-            'detection = catRobot.catDetection:main'
+            'detection = catRobot.catDetection:main',
+            'motorContol = catRobot.motor:main'
         ],
     },
 )

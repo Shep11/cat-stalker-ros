@@ -28,6 +28,21 @@ class CatDetectorClientAsync(Node):
 rclpy.init()
 detact_client = CatDetectorClientAsync()
 
+class CatPlayClientAsync(Node):
+
+    def __init__(self):
+        super().__init__('cat_play_service')
+        self.cli = self.create_client(AddTwoInts, 'play_with_cat')
+        while not self.cli.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('service not available, waiting again... ')
+        self.req = AddTwoInts.Request()
+
+    def send_request(self, angle, dis):
+        self.req.a = angle
+        self.req.b = dis
+        return self.cli.call_async(self.req)
+play_client = CatPlayClientAsync()
+
 class CheckCat(Node):
 
     def __init__(self):
@@ -41,6 +56,12 @@ class CheckCat(Node):
         self.get_logger().info('Incoming request\na: %d b: %d' % (request.a, request.b))
         future = detact_client.send_request(request.a, request.b)
         rclpy.spin_until_future_complete(detact_client, future)
+        print(future.result)
+        print(type(future.result))
+        
+        if future.result().sum:
+            future = play_client.send_request(request.a, request.b)
+            rclpy.spin_until_future_complete(play_client, future)
 
         return response
 

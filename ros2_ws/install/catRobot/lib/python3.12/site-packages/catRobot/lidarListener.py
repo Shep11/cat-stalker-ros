@@ -45,10 +45,16 @@ def blowup(samp, old, b):
     x21 = x2 - x1
 
     v1d = ((yy)**2 + (xx)**2)**(1/2)
-    v1t = math.atan(yy/xx)
+    v1t = 0
+    if xx != 0:
+        v1t = math.atan(yy/xx)
+    
+    
 
     v2d = ((y21)**2 + (x21)**2)**(1/2)
-    v2t = math.atan(y21/x21)
+    v2t = 0
+    if x21 != 0:
+        v2t = math.atan(y21/x21)
     
     proj = math.sin(v1t - v2t) * v1d
 
@@ -77,7 +83,7 @@ def main():
             b = 0
             temp = next(scan).samples
             for samp in temp:
-                while (b < len(old) - 1 and old[b].angle < samp.angle):
+                while (b < (len(old) - 1) and old[b].angle < samp.angle):
                     b = b + 1
 
                 if (samp.distance > 10 and samp.distance < 100):
@@ -91,6 +97,8 @@ def main():
                         break
                 else:
                     b = b - 1
+                    if b < 0:
+                        b = 0
                     (temp.remove(samp))
                     
             old = temp
