@@ -5,10 +5,14 @@ from rclpy.node import Node
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import numpy as np
+import cv2
+import os
+import time
 
 
 # message import type!
 # use /msgs OR BOOL
+
 
 
 """
@@ -32,7 +36,13 @@ class CatDetectorNode(Node):
         self.get_logger().info('Cat Detector Node started')
 
     def detect_cat(self, request, response):
+        cap = cv2.VideoCapture(0)
+        ret, frame = cap.read()
         image_path = "temp.jpg"
+        
+        cv2.imwrite(image_path, frame)
+        #time.sleep(5)
+        cap.release()
 
         # Resize image
         img = image.load_img(image_path, target_size=(224, 224))  
@@ -59,6 +69,7 @@ class CatDetectorNode(Node):
             response.sum = 1
         else: 
             response.sum = 0
+        #os.remove(image_path)
         return response
 
 def main(args=None):
